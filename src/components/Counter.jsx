@@ -4,21 +4,22 @@ export default function Counter() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="flex flex-col items-center gap-4 p-6 bg-gray-100 rounded-lg shadow-md">
-      <h1 className="text-2xl font-bold">Contador</h1>
-      <p className="text-xl">Valor actual: {count}</p>
-      <div className="flex gap-4">
-        <button
-          onClick={() => setCount(count + 1)}
-          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
-        >
-          Incrementar
-        </button>
+    <div className="flex flex-col items-center gap-6">
+      <p className="text-4xl font-extrabold text-gray-800 transition-all duration-200">
+        {count}
+      </p>
+      <div className="flex gap-6">
         <button
           onClick={() => setCount(count - 1)}
-          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
+          className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow transition transform active:scale-95"
         >
           Decrementar
+        </button>
+        <button
+          onClick={() => setCount(count + 1)}
+          className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow transition transform active:scale-95"
+        >
+          Incrementar
         </button>
       </div>
     </div>
