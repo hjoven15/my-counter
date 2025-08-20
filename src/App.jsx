@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Counter from "./components/Counter";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hola Tailwind!</h1>
+      <div className="flex items-center justify-center h-screen">
+        <Counter />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
